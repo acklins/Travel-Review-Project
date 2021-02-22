@@ -1,20 +1,16 @@
 {
   "development": {
-    "username": "brock",
-    "password": "Thesputnik1",
-    "database": "express_auth_development",
+    "database": "traveldb",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "test": {
-    "username": "brock",
-    "password": "Thesputnik1",
-    "database": "express_auth_test",
+    "database": "traveldb",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "database": "express_auth_production",
+    "database": "traveldb",
     "host": "127.0.0.1",
     "dialect": "postgres"
   }
