@@ -7,3 +7,40 @@ nav ul li {
 h1 {
   color: chartreuse;
 }
+div.home {
+  width: 2000px;
+  height: 2000px;
+  /* background-size:cover; contain */
+  background-image: url("/img/jetHome.png");
+}
+div.jetLogin {
+  width: 2000px;
+  height: 2000px;
+  /* width: 400px; */
+  /* height: 500px; */
+  /* float:left; */
+  /* border:1px; */
+  background-image: url("img/jetLogin.png");
+  /* background-size:cover; */
+
+}
+div.jetSignup {
+  width: 2000px;
+  height: 2000px;
+  background-image: url("img/jetSignup.png");
+
+}
+@media only screen and (max-width: 375px){
+  div.home{
+    max-width: 300px;
+    width: 100%;
+  }
+  div.jetLogin{
+    max-width: 300px;
+    width: 100%;
+  }
+  div.jetSignup{
+    max-width: 300px;
+    width: 100%;
+  }
+}
