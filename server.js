@@ -43,7 +43,7 @@ app.use((req, res, next) => {
 
 
 app.get('/', (req, res) => {
-  res.render('dashboard');
+  res.render('index.ejs');
 });
 
 app.get('/dashboard', isLoggedIn, (req, res) => {

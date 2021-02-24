@@ -7,9 +7,9 @@ li {
   list-style: none;
 }
 
-body.home {
+body.homeDella {
   height: 100vh;
-  display:flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   background-position: center;
@@ -17,14 +17,14 @@ body.home {
   background-size: cover;
   background-image: url("/img/jetHome.png");
 }
-body.jetLogin {
+body.jetLoginDella {
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-image: url("/img/jetLogin.png");
 }
-body.jetSignup {
+body.jetSignupDella {
   height: 100vh;
   background-position: center;
   background-repeat: no-repeat;
@@ -32,28 +32,28 @@ body.jetSignup {
   background-image: url("/img/jetSignup.png");
 }
 
-div.boxHome {
-  display:flex;
+div.boxHomeDella {
+  display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction:column;
+  flex-direction: column;
   height: 300px;
   width: 300px;
   background-color: rgba(255, 255, 255, 0.1);
   border: 15px solid burlywood;
   border-radius: 25px;
 }
-div.boxLogin {
+div.boxLoginDella {
   height: 200px;
   width: 300px;
   padding: 50px;
   margin: 20px;
   border-radius: 25px;
   background-color: opacity;
-  border: 15px solid rgb(71,108,146);
+  border: 15px solid rgb(71, 108, 146);
 }
 
-div.boxSignup {
+div.boxSignupDella {
   height: 200px;
   width: 300px;
   padding: 50px;
@@ -61,57 +61,58 @@ div.boxSignup {
   margin-top: 175px;
   border-radius: 25px;
   background-color: opacity;
-  border: 15px solid rgb(31,68,177);
+  border: 15px solid rgb(31, 68, 177);
 }
-div.maldives {
-  color:gold;
-  display:flex;
+div.maldivesDella {
+  color: gold;
+  display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction:column;
+  flex-direction: column;
 }
-label.labelBox {
-  display:block;
-  color:blue;
+
+label.labelBoxDella {
+  display: block;
+  color: blue;
   font-size: xx-large;
 }
-label.labelLogin{
+label.labelLoginDella {
   display: block;
   font-size: xx-large;
 }
-input.inputLogin {
+input.inputLoginDella {
   border-radius: 10px;
 }
-input.loginBox {
+input.loginBoxDella {
   border-radius: 10px;
   font-size: large;
 }
-input.inputBox {
-  display:block;
+input.inputBoxDella {
+  display: block;
   border-radius: 10px;
 }
-input.submitBox {
+input.submitBoxDella {
   border-radius: 10px;
-  color:blue;
+  color: blue;
 }
-a.signCenter{
+a.signCenter {
   font-size: xx-large;
   font-weight: bolder;
-  color:burlywood;
+  color: burlywood;
 }
-a.loginCenter{
+a.loginCenter {
   font-size: xx-large;
   font-weight: bolder;
-  color:burlywood;
+  color: burlywood;
 }
-a.signInHome {
+a.signInHomeDella {
   font-size: xx-large;
   font-weight: bolder;
-  color:brown;
+  color: brown;
 }
 
-a.loginHome {
-  color:brown;
+a.loginHomeDella {
+  color: brown;
   font-size: xx-large;
   font-weight: bolder;
 }
@@ -129,3 +130,6 @@ a.loginHome {
     width: 100%;
   }
 }
+/* .nav-view {
+  display:none;
+} */
