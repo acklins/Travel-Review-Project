@@ -7,20 +7,7 @@ const db = require("../models")
 
 // GET /destinations - After search, renders a page of vacation destinations to pick from
 router.get('/', (req, res) => {
-    // let place = req.query
-    let apiUrl = 'https://api.teleport.org/api/cities/?search=rome'
-    axios.get(apiUrl)
-    .then((responseData) => {
-        let data = responseData.data._embedded['city:search-results'][0]
-        let geoid = data._links['city:item'].href
-        axios.get(geoid)
-        .then((responseData) => {
-            let specData = responseData.data
-            console.log(specData)
-            res.render('destinations/search.ejs', {specData: specData})
-        })
-    })
-    // res.send('Found Data')
+    res.render()
 })
 
 // GET /destinations/:id - Render a page with a single destination with info about it
