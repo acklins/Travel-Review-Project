@@ -5,24 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Authentication</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/darius.css">
   </head>
   <body>
-    <header>
-      <nav>
-        <ul>
-          <% if (!currentUser) { %>
-            <li><a href="/auth/signup">Signup</a></li>
-            <li><a href="/auth/login">Login</a></li>
-          <% } else { %>
-            <li><a href="/auth/logout">Logout</a></li>
-            <li><a href="/profile">Profile</a></li>
-          <% } %>
-        </ul>
-      </nav>
-    </header>
-    <%- include("partials/alerts") %>
-
-    <h1>Authentication</h1>
-    <%- body %>
+    <div class="nav-view">
+      <header>
+        <%- include("partials/nav") %>
+      </header>
+      <%- include("partials/alerts") %>
+    </div>
+    <div class="main-view">
+      <h1>Authentication</h1>
+      <%- body %>
+    </div>
   </body>
 </html>
