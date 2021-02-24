@@ -1,5 +1,6 @@
 'use strict';
-const bcrypt = require('bcrypt')
+const bcrypt = require('bcrypt');
+const { query } = require('express');
 const db = require('../models')
 
 module.exports = {
@@ -138,6 +139,202 @@ module.exports = {
       }
     ], {returning: true})
     console.log('bulk insert: ', bulkDestinations)
+
+    await queryInterface.bulkDelete('users', null, {
+      truncate: true,
+      cascade: true,
+      restartIdentity: true
+    })
+
+    const bulkUsers = await queryInterface.bulkInsert('users', [
+      {
+        email: 'della@example.com',
+        name: 'Della',
+        password: bcrypt.hashSync('password', 12),
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },  {
+        email: 'darius@example.com',
+        name: 'Darius',
+        password: bcrypt.hashSync('password', 12),
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },  {
+        email: 'caroline@example.com',
+        name: 'Caroline',
+        password: bcrypt.hashSync('password', 12),
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },  {
+        email: 'michael@example.com',
+        name: 'Michael',
+        password: bcrypt.hashSync('password', 12),
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },  {
+        email: 'brock@example.com',
+        name: 'Brock',
+        password: bcrypt.hashSync('password', 12),
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },  {
+        email: 'ashley@example.com',
+        name: 'Ashley',
+        password: bcrypt.hashSync('password', 12),
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },  {
+        email: 'mario@example.com',
+        name: 'Mario',
+        password: bcrypt.hashSync('password', 12),
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },  {
+        email: 'alex@example.com',
+        name: 'Alex',
+        password: bcrypt.hashSync('password', 12),
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },  {
+        email: 'zach@example.com',
+        name: 'Zach',
+        password: bcrypt.hashSync('password', 12),
+        createdAt: new Date(),
+        updatedAt: new Date()
+      }
+    ], {returning: true})
+    console.log('bulk insert: ', bulkUsers)
+
+    await queryInterface.bulkDelete('reviews', null, {
+      truncate: true,
+      cascade: true,
+      restartIdentity: true
+    })
+
+    const bulkReviews = await queryInterface.bulkInsert('reviews', [
+      {
+        userId: bulkUsers[0].id,
+        destinationId: bulkDestinations[0].id,
+        content: "What's not to like about Amsterdam?",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },  {
+        userId: bulkUsers[1].id,
+        destinationId: bulkDestinations[1].id,
+        content: "My inner Greek God is finally coming through.",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },  {
+        userId: bulkUsers[5].id,
+        destinationId: bulkDestinations[2].id,
+        content: "Wait, wasn't there a wall here?",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },  {
+        userId: bulkUsers[3].id,
+        destinationId: bulkDestinations[3].id,
+        content: "For a city in a country named Hungary, the food was only fair.",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },  {
+        userId: bulkUsers[8].id,
+        destinationId: bulkDestinations[4].id,
+        content: "I thought the pyramids would be bigger.",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },  {
+        userId: bulkUsers[6].id,
+        destinationId: bulkDestinations[5].id,
+        content: "I thought it was supposed to be colorful? Maybe it's just my colorblindness.",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },  {
+        userId: bulkUsers[2].id,
+        destinationId: bulkDestinations[6].id,
+        content: "Where are all the turkeys?",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },  {
+        userId: bulkUsers[4].id,
+        destinationId: bulkDestinations[7].id,
+        content: "Big Ben was cool but they wouldn't let me into Parliament so I guess it was ok.",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },  {
+        userId: bulkUsers[5].id,
+        destinationId: bulkDestinations[8].id,
+        content: "I never wanted to leave, I've never felt more at home.",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },  {
+        userId: bulkUsers[4].id,
+        destinationId: bulkDestinations[9].id,
+        content: "Not quite home but it's Canada ey.",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },  {
+        userId: bulkUsers[1].id,
+        destinationId: bulkDestinations[10].id,
+        content: "Beautiful and modern, can't wait to go back!",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },  {
+        userId: bulkUsers[8].id,
+        destinationId: bulkDestinations[11].id,
+        content: "They kicked me out of the Louvre for trying to climb the pyramid. I just wanted to see the rest of the city!",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },  {
+        userId: bulkUsers[6].id,
+        destinationId: bulkDestinations[12].id,
+        content: "A wonderful and spiritual trip, but not quite what I was expecting after that Fast and Furious movie",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },  {
+        userId: bulkUsers[7].id,
+        destinationId: bulkDestinations[13].id,
+        content: "I mean, when in Rome...",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },  {
+        userId: bulkUsers[3].id,
+        destinationId: bulkDestinations[14].id,
+        content: "I thought it would have more soul given the name.",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },  {
+        userId: bulkUsers[6].id,
+        destinationId: bulkDestinations[15].id,
+        content: "I couldn't find 42 Wallaby Way.",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },  {
+        userId: bulkUsers[8].id,
+        destinationId: bulkDestinations[16].id,
+        content: "Can I move here just to get my vaccine now?",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },  {
+        userId: bulkUsers[5].id,
+        destinationId: bulkDestinations[17].id,
+        content: "Sushi, straight from the origin. Now that's fresh.",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },  {
+        userId: bulkUsers[2].id,
+        destinationId: bulkDestinations[18].id,
+        content: "Where do they make the sausages?",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      },  {
+        userId: bulkUsers[1].id,
+        destinationId: bulkDestinations[19].id,
+        content: "Honestly, I don't really know what to say so, yeah.",
+        createdAt: new Date(),
+        updatedAt: new Date()
+      }
+    ], {returning: true})
+    console.log('bulk insert: ', bulkReviews)
   },
 
   down: async (queryInterface, Sequelize) => {
