@@ -14,7 +14,7 @@ module.exports = {
       country: {
         type: Sequelize.STRING
       },
-      apiId: {
+      image: {
         type: Sequelize.STRING
       },
       createdAt: {
