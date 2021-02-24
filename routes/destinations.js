@@ -1,12 +1,13 @@
 const express = require('express');
 const router = express.Router();
 const db = require("../models")
+// const methodOverride = require('method-override')
 
 // Routes
 
 // GET /destinations - After search, renders a page of vacation destinations to pick from
 router.get('/', (req, res) => {
-    res.render()
+    
 })
 
 // GET /destinations/:id - Render a page with a single destination with info about it
