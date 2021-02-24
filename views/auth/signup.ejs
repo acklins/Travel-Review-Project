@@ -1,23 +1,22 @@
-<div class="jetSignup">
+<%- include("../partials/nav") %>
+<body class="jetSignup">
+  <div class="boxSignup"> 
+    <div class="maldives">
+  <form action="/auth/signup" method="POST">
+  <label class="labelBox" for="new-email">Email</label>
 
-  <div>
-<form action="/auth/signup" method="POST">
-  <label for="new-email">Email</label>
-  <input id="new-email" type="email" name="email" required>
-</div>
-
-<div>
-  <label for="new-name">Name</label>
-  <input id="new-name" type="text" name="name">
-</div>
-
-<div>
-  <label for="new-password">Password</label>
-  <input id="new-password" type="password" name="password" min="8">
-</div>
-
-<div>
-  <input type="submit" value="Sign up">
-</div>
+  <input class="inputBox" id="new-email" type="email" name="email" required>
+  
+  <label class="labelBox" for="new-name">Name</label>
+  
+  <input class="inputBox" id="new-name" type="text" name="name">
+  
+  <label class="labelBox" for="new-password">Password</label>
+  
+  <input class="inputBox" id="new-password" type="password" name="password" min="8">
+  
+  <input class="submitBox" type="submit" value="Sign up">
 </form>
 </div>
+</div>
+</body>
