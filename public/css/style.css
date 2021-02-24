@@ -1,9 +1,131 @@
 nav ul li {
   text-decoration: none;
   display: inline-block;
-  margin-right: .3em;
+  margin-right: 0.3em;
+}
+li {
+  list-style: none;
 }
 
-h1 {
-  color: chartreuse;
+body.home {
+  height: 100vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/img/jetHome.png");
+}
+body.jetLogin {
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/img/jetLogin.png");
+}
+body.jetSignup {
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("/img/jetSignup.png");
+}
+
+div.boxHome {
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column;
+  height: 300px;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 15px solid burlywood;
+  border-radius: 25px;
+}
+div.boxLogin {
+  height: 200px;
+  width: 300px;
+  padding: 50px;
+  margin: 20px;
+  border-radius: 25px;
+  background-color: opacity;
+  border: 15px solid rgb(71,108,146);
+}
+
+div.boxSignup {
+  height: 200px;
+  width: 300px;
+  padding: 50px;
+  margin: 20px;
+  margin-top: 175px;
+  border-radius: 25px;
+  background-color: opacity;
+  border: 15px solid rgb(31,68,177);
+}
+div.maldives {
+  color:gold;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction:column;
+}
+label.labelBox {
+  display:block;
+  color:blue;
+  font-size: xx-large;
+}
+label.labelLogin{
+  display: block;
+  font-size: xx-large;
+}
+input.inputLogin {
+  border-radius: 10px;
+}
+input.loginBox {
+  border-radius: 10px;
+  font-size: large;
+}
+input.inputBox {
+  display:block;
+  border-radius: 10px;
+}
+input.submitBox {
+  border-radius: 10px;
+  color:blue;
+}
+a.signCenter{
+  font-size: xx-large;
+  font-weight: bolder;
+  color:burlywood;
+}
+a.loginCenter{
+  font-size: xx-large;
+  font-weight: bolder;
+  color:burlywood;
+}
+a.signInHome {
+  font-size: xx-large;
+  font-weight: bolder;
+  color:brown;
+}
+
+a.loginHome {
+  color:brown;
+  font-size: xx-large;
+  font-weight: bolder;
+}
+@media only screen and (max-width: 375px) {
+  body.home {
+    max-width: 300px;
+    width: 100%;
+  }
+  body.jetLogin {
+    max-width: 300px;
+    width: 100%;
+  }
+  body.jetSignup {
+    max-width: 300px;
+    width: 100%;
+  }
 }
