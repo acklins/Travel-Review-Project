@@ -4,7 +4,8 @@ const layouts = require('express-ejs-layouts');
 const session = require('express-session');
 const flash = require("connect-flash")
 const passport = require('./config/ppConfig');
-const isLoggedIn = require('./middleware/isLoggedIn')
+const isLoggedIn = require('./middleware/isLoggedIn');
+const db = require('./models');
 
 const app = express();
 
@@ -47,7 +48,19 @@ app.get('/', (req, res) => {
 });
 
 app.get('/dashboard', isLoggedIn, (req, res) => {
-  res.render('dashboard.ejs');
+  db.destination.findAll()
+    .then((destinations) => {
+      const destArr = []
+      destinations.forEach((destination) => {
+        const destData = {
+          destinationName: destination.city,
+          destinationId: destination.id
+        }
+        destArr.push(destData)
+        console.log(destArr)
+      })
+      res.render('dashboard.ejs', {destData: destArr});
+    })
 });
 
 app.use('/auth', require('./routes/auth'));

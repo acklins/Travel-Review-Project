@@ -12,17 +12,14 @@
     <% if (!currentUser) { %>
         <li><a class="signCenter" href="/auth/signup">Signup</a></li>
         <li><a class="loginCenter" href="/auth/login">Login</a></li>
-    <% } %>
-    <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-        <div id="myDropdown" class="dropdown-content">
-            <!-- add overflow-y for scrollable dropdown -->
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+        <% } %>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+            <div id="myDropdown" class="dropdown-content">
+                <!-- add overflow-y for scrollable dropdown -->
+                <% destData.forEach(function (destData){ %>
+                <a href="destinations/<%= destData.destinationId %>"><%= destData.destinationName %></a>
+                <% }) %>
+            </div>
         </div>
-    </div>
 </div>
