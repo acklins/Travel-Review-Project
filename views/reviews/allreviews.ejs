@@ -1,0 +1,12 @@
+<h2>Reviews</h2>
+
+<% console.log(revData) %>
+<% if (revData) { %>
+    <% revData.forEach(function(revData) { %>
+        <div class="well">
+            <h4><%= revData.destinationName %></h4>
+            <h5><%= revData.userName %></h5>
+            <p><%= revData.review %></p>
+        </div>
+    <% }) %>
+<% } %>

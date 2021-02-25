@@ -52,7 +52,6 @@ app.get('/dashboard', isLoggedIn, (req, res) => {
 
 app.use('/auth', require('./routes/auth'));
 app.use('/destinations', require('./routes/destinations'))
-app.use('/destinations/:id/reviews', require('./routes/reviews'))
 
 var server = app.listen(process.env.PORT || 3000, ()=> console.log(`🎧You're listening to the smooth sounds of port ${process.env.PORT || 3000}🎧`));
 

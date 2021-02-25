@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
   destination.init({
     city: DataTypes.STRING,
     country: DataTypes.STRING,
-    apiId: DataTypes.STRING
+    image: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'destination',
