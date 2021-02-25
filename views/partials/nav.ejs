@@ -1,13 +1,13 @@
-<nav >
+<nav>
   <ul>
     <div>
-        <% if (!currentUser) { %>
-        <li><a class="signCenter" href="/auth/signup">Signup</a></li>
-        <li><a class="loginCenter" href="/auth/login">Login</a></li>
-        <% } else { %>
-        <li><a href="/auth/logout">Logout</a></li>
-        <li><a href="/dahsboard">Dashboard</a></li>
-        <% } %>
+      <% if (!currentUser) { %>
+      <li><a class="signCenter" href="/auth/signup">Signup</a></li>
+      <li><a class="loginCenter" href="/auth/login">Login</a></li>
+      <% } else { %>
+      <li><a href="/auth/logout">Logout</a></li>
+      <li><a href="/dashboard">Dashboard</a></li>
+      <% } %>
     </div>
   </ul>
 </nav>
