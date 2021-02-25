@@ -130,6 +130,13 @@ a.loginHomeDella {
     width: 100%;
   }
 }
-/* .nav-view {
-  display:none;
-} */
+div.main-view{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.nav-view{
+  display: none;
+}

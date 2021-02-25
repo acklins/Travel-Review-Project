@@ -21,21 +21,25 @@ body {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: red;
+  background-color: #3AAFA9;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 body div.nav-view {
   display: none;
   height: 10%;
-  width: 100%;
-  border: 2pt solid black;
+
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: space-evenly;
+      -ms-flex-align: space-evenly;
+          align-items: space-evenly;
 }
 
 body div.nav-view header {
@@ -95,10 +99,13 @@ body div.nav-view header nav ul div {
 }
 
 body div.nav-view header nav ul div li a {
-  color: blue;
+  color: #DEF2F1;
 }
 
 body div.main-view {
+
+  background-color: #3AAFA9;
+
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -108,12 +115,78 @@ body div.main-view {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+
   width: 100%;
   height: 90%;
 }
 
 body h1 {
   color: blue;
+}
+
+.dashboard-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+
+.dashboard-container h2 {
+  color: #17252A;
+}
+
+.dropbtn {
+  background-color: #17252A;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #17252A;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  -webkit-box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.show {
+  display: block;
 }
 
 @media only screen and (min-width: 768px) {
@@ -127,6 +200,12 @@ body h1 {
             align-items: center;
     -ms-flex-pack: distribute;
         justify-content: space-around;
+  }
+  body .nav-view {
+    border-top: 2px solid;
+  }
+  #myDropdown {
+    overflow-y: scroll;
   }
 }
 /*# sourceMappingURL=darius.css.map */

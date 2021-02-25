@@ -1,5 +1,9 @@
 // Variables go below
-// $base-color:
+$header-text: #17252A;
+$dark-green: #2B7A78;
+$base-color: #3AAFA9;
+$text-color: #DEF2F1;
+$white: #FEFFFF;
 // $secondary-color:
 // $primary-background
 // $secondary-background
@@ -18,18 +22,18 @@ body {
     align-items: center;
     justify-content: space-between;
 
-    background-color: red;
+    background-color: $base-color;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     
     div.nav-view{
         display:none;
         height: 10%;
-        width: 100%;
-        border: 2pt solid black;
+        width: 80%;
+        // border-bottom: 2pt solid black;
 
         // display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: space-evenly;
         header {
             display: flex;
             align-items: center;
@@ -56,7 +60,7 @@ body {
                         justify-content: flex-start;
                         li {
                             a{
-                                color: blue;
+                                color: $text-color;
                             }
                         }
                     }
@@ -65,21 +69,71 @@ body {
         }
     }
     div.main-view{
+        background-color: $base-color;
         display: flex;
         justify-content: center;
         align-items:center;
         width: 100%;
         height: 90%;
     }
-        
 
     h1 {
         color: blue;
     }
-
-    // This where the code will go for the different frames
 }
 
+.dashboard-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 100%;
+    width: 100%;
+    
+    h2{
+        color: $header-text;
+    }
+    
+}
+
+.dropbtn{
+    background-color: $header-text;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus{
+    background-color: $header-text;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover{ background-color: #ddd; }
+
+.show { display: block; }
 
 
 @media only screen and (min-width: 768px) {
@@ -89,6 +143,7 @@ body {
         align-items: center;
         justify-content: space-around;
         .nav-view{
+            border-top: 2px solid ;
             header{
                 nav{
                     ul{
@@ -112,4 +167,8 @@ body {
         }
     }
 
+    // makes the dropdown scrollable
+    #myDropdown{
+        overflow-y: scroll;
+    }
 }
