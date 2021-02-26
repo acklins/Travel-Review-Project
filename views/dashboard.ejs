@@ -1,28 +1,21 @@
-<script>
-    function myFunction(){
-        document.getElementById("myDropdown").classList.toggle("show")
-    }
-</script>
-
 <div class="dashboard-container">
-    <h2>Dashboard</h2>
-    <h3>Welcome to the Dashboard</h3>
-    <!-- need drop down -->
+    <div class="top-text">
+        <h2>Dashboard</h2>
+        <h3>Select a city below</h3>
+        <div>&#x2193;</div>
+    </div>
     <!-- Hardcode the nav onto every page needed -->
     <% if (!currentUser) { %>
         <li><a class="signCenter" href="/auth/signup">Signup</a></li>
         <li><a class="loginCenter" href="/auth/login">Login</a></li>
-    <% } %>
-    <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">Dropdown</button>
-        <div id="myDropdown" class="dropdown-content">
-            <!-- add overflow-y for scrollable dropdown -->
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
-          <a href="#">Link 1</a>
-          <a href="#">Link 2</a>
-          <a href="#">Link 3</a>
+        <% } %>
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn"><h3>Show Cities</h3></button>
+            <div id="myDropdown" class="dropdown-content">
+                <!-- Here are where the seeded cities are on the dropdown -->
+                <% destData.forEach(function (destData){ %>
+                <a href="destinations/<%= destData.destinationId %>"><%= destData.destinationName %></a>
+                <% }) %>
+            </div>
         </div>
-    </div>
 </div>
