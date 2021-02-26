@@ -1,0 +1,10 @@
+<h1>Add a new review</h1>
+
+<div>
+    <form action="/destinations/<%= destination.id %>/reviews/new" method="POST">
+        <h3 id="username"><%= currentUser.name %></h3>
+        <h3 id="cityname"><%= destination.city %></h3>
+        <input name="reviewcontent" id="reviewcontent" type="text" placeholder="Enter Review Here">
+        <input type="submit">
+    </form>
+</div>
