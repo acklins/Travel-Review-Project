@@ -1,0 +1,9 @@
+<h1>Edit Review</h1>
+
+<div>
+    <form action="/destinations/<%= destination.id  %>/reviews/" method="POST">
+        <h3 id="username"><%= currentUser.name %></h3>
+        <h3 id="cityname"><%= destination.city %></h3>
+        <input id="reviewcontent" type="text" value="<%= review.content %>">
+    </form>
+</div>
