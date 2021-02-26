@@ -122,15 +122,16 @@ body div.main-view {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   height: 100%;
   width: 100%;
 }
 
 .dashboard-container .top-text {
   padding-top: 15pt;
+  margin-bottom: 50pt;
+  height: 150pt;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -154,7 +155,11 @@ body div.main-view {
 
 .dashboard-container .top-text h2, .dashboard-container .top-text h3 {
   color: #17252A;
-  margin-bottom: 35pt;
+  margin-bottom: 15pt;
+}
+
+.dashboard-container .top-text div {
+  font-size: 50pt;
 }
 
 .dropbtn {
@@ -244,6 +249,10 @@ body div.main-view {
   height: 300pt;
   width: 100%;
   overflow-y: scroll;
+}
+
+.alert.alert-success {
+  color: #3AAFA9;
 }
 
 @media only screen and (min-width: 768px) {
