@@ -12,7 +12,6 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       models.destination.hasMany(models.review)
-      models.destination.belongsToMany(models.user, {through: "usersDestinations"})
     }
   };
   destination.init({
