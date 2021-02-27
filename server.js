@@ -57,7 +57,6 @@ app.get('/dashboard', isLoggedIn, (req, res) => {
           destinationId: destination.id
         }
         destArr.push(destData)
-        console.log(destArr)
       })
       res.render('dashboard.ejs', {destData: destArr});
     })
