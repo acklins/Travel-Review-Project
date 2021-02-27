@@ -1,0 +1,19 @@
+<h2>Reviews</h2>
+
+
+<% if (revData) { %>
+    <% revData.forEach(function(revData) { %>
+        <a href="/destinations/<%= revData.destinationId %>/reviews/new">New Review</a>
+        <div class="well">
+            <h4><%= revData.destinationName %></h4>
+            <h5><%= revData.userName %></h5>
+            <p><%= revData.reviewText %></p>
+            <a href="/destinations/<%= revData.destinationId %>/reviews/<%= revData.reviewId %>/edit">Edit</a>
+            <form method="POST" action="/destinations/<%= revData.destinationId %>/reviews/<%= revData.reviewId %>/?_method=DELETE">
+                <input type="submit" value="Delete">
+            </form>
+        <% }) %>
+     </div>
+ <% } else { %>
+    <h3>No Reviews for <%= revData.destinationName %></h3>
+<% } %>

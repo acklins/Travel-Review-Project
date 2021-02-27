@@ -1,0 +1,9 @@
+<div class="city-show">
+    <div>
+        <h2> <%= destination.city %>, <%= destination.country %> </h2>
+        <img src="<%= destination.image %>" alt="<%= destination.city %>">
+    </div>
+    <form action="/destinations/<%= destination.id %>/reviews" method="GET">
+        <button class="reviews" type="submit">Checkout Reviews Here!</button>
+    </form>
+</div>
