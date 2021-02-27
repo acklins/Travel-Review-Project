@@ -80,7 +80,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
 
     height: 100%;
     width: 100%;
@@ -107,7 +107,7 @@ body {
         }
     }
 }
-// Dropdown Menu - how would I get it to open the menu upwards from the bottom?
+
 .dropbtn{
     background-color: $header-text;
     color: white;
@@ -183,20 +183,51 @@ body {
     height: 300pt;
     width: 100%;
     overflow-y: scroll;
+    // bottom allows for the mobile menu to scroll up
+    bottom: 52%;
+    border-top: 2pt solid $header-text;
 }
 // for singleshow.js
 div.city-show{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     div{
-        h2{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
 
+        height: 90%;
+        width: 100%;
+        h2{
+            margin-top: 15pt;
         }
         img{
-
+            height: 250pt;
+            width: 250pt;
+            border-radius: 15pt;
+            border: 3.5pt solid $header-text;
         }
     }
     form{
-        button{
+        height: 10%;
+        width: 100%;
 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        button{
+            background-color: $header-text;
+            height: 100%;
+            width: 100%;
+
+            color: $text-color;
+            font-size: 26pt;
         }
     }
 }
