@@ -8,10 +8,12 @@
                 <h4><%= revData.destinationName %></h4>
                 <h5><%= revData.userName %></h5>
                 <p><%= revData.reviewText %></p>
-                <a href="/destinations/<%= revData.destinationId %>/reviews/<%= revData.reviewId %>/edit">Edit</a>
-                <form method="POST" action="/destinations/<%= revData.destinationId %>/reviews/<%= revData.reviewId %>/?_method=DELETE">
-                    <input type="submit" value="Delete">
-                </form>
+                <% if (currentUser.name === revData.userName) {  %>
+                    <a href="/destinations/<%= revData.destinationId %>/reviews/<%= revData.reviewId %>/edit">Edit</a>
+                    <form method="POST" action="/destinations/<%= revData.destinationId %>/reviews/<%= revData.reviewId %>/?_method=DELETE">
+                        <input type="submit" value="Delete">
+                    </form>
+                <% } %>
             <% }) %>
         </div>
     <% } else { %>

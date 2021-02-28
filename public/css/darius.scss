@@ -1,7 +1,7 @@
 // Variables go below
 $header-text: #17252A;
 $dark-green: #2B7A78;
-$base-color: #3AAFA9;
+$base-color: #3AAFA9; 
 $text-color: #DEF2F1;
 $white: #FEFFFF;
 
@@ -59,6 +59,7 @@ body {
                         li {
                             a{
                                 color: $text-color;
+                                text-decoration: none;
                             }
                         }
                     }
@@ -72,7 +73,7 @@ body {
         justify-content: center;
         align-items:center;
         width: 100%;
-        height: 100%;
+        height: 95%;
     }
 }
 // Dashboard
@@ -123,7 +124,7 @@ body {
 
     // border-bottom: 2pt solid $header-text;
     // border-top: 2pt solid $header-text;
-    margin-top: 50pt;
+    // padding-top: 50pt;
     h3{
         height: 100%;
         width: 100%;
@@ -137,6 +138,7 @@ body {
     background-color: $dark-green;
     h3:hover{
         color: $header-text;
+        text-decoration: underline;
     }
 }
 
@@ -175,7 +177,11 @@ body {
     padding: 25pt 0;
 }
 
-.dropdown-content a:hover{ background-color: #ddd; color: $dark-green; }
+.dropdown-content a:hover{
+    background-color: #ddd;
+    color: $dark-green;
+    text-decoration: underline;
+}
 
 .show { display: block; }
 
@@ -184,7 +190,7 @@ body {
     width: 100%;
     overflow-y: scroll;
     // bottom allows for the mobile menu to scroll up
-    bottom: 52%;
+    bottom: 100%;
     border-top: 2pt solid $header-text;
 }
 // for singleshow.js
@@ -232,7 +238,51 @@ div.city-show{
     }
 }
 // allreview.ejs
-div.allreviews-container
+div.allreviews-container{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h2{
+        text-align: center;
+        font-size: 36pt;
+        color: $header-text;
+        margin-bottom: 10pt;
+    }
+    a{
+        // margin-left: 15pt;
+        margin-bottom: 15pt;
+        text-decoration: none;
+        color: peachpuff;
+    }
+    div.well{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        padding-left: 15pt;
+        width: 100%;
+    
+        background-color: rgba(0, 0, 0, 0.2);
+        h4{
+            font-size: 22pt;
+            margin-bottom: 5pt;
+        }
+        h5{
+            font-size: 16pt;
+            font-weight: 300;
+            margin-bottom: 5pt;
+        }
+        p{
+
+        }
+        a{
+
+        }
+    }
+}
 
 .alert.alert-success{
     color: $base-color;
@@ -257,7 +307,11 @@ div.allreviews-container
                         div{
                             li{
                                 a{
-
+                                    color: $base-color;
+                                    padding-left: 30px;
+                                }
+                                a:hover{
+                                    text-decoration: underline;
                                 }
                             }
                         }
@@ -305,6 +359,7 @@ div.allreviews-container
             }
             div.dropdown-content{
                 // all of our cities in the dropdown
+                height: 100%;
                 a{
                     font-size: 36px;
                 }
@@ -313,7 +368,34 @@ div.allreviews-container
     }
     // dropdown changes
     .dropdown-content.show{
-        height: 100%;
+        height: 80%;
+        bottom: 0;
+        top: 15%;
+    }
+    div.city-show{
+        justify-content: space-between;
+        div{
+            h2{
+                font-size: 50px;
+                margin-bottom: 50px;
+            }
+            img{
+
+            }
+        }
+        form{
+            button{
+                
+            }
+            button:hover{
+                text-decoration: underline;
+                background-color: $dark-green;
+                color: $header-text;
+            }
+        }
     }
 
+    div.allreviews-container{
+
+    }
 }

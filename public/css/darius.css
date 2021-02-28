@@ -95,6 +95,7 @@ body div.nav-view header nav ul div {
 
 body div.nav-view header nav ul div li a {
   color: #DEF2F1;
+  text-decoration: none;
 }
 
 body div.main-view {
@@ -108,7 +109,7 @@ body div.main-view {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  height: 100%;
+  height: 95%;
 }
 
 .dashboard-container {
@@ -179,7 +180,6 @@ body div.main-view {
           align-items: center;
   height: 75px;
   width: 100%;
-  margin-top: 50pt;
 }
 
 .dropbtn h3 {
@@ -202,6 +202,7 @@ body div.main-view {
 
 .dropbtn:hover h3:hover, .dropbtn:focus h3:hover {
   color: #17252A;
+  text-decoration: underline;
 }
 
 .dropdown {
@@ -240,6 +241,7 @@ body div.main-view {
 .dropdown-content a:hover {
   background-color: #ddd;
   color: #2B7A78;
+  text-decoration: underline;
 }
 
 .show {
@@ -250,7 +252,7 @@ body div.main-view {
   height: 300pt;
   width: 100%;
   overflow-y: scroll;
-  bottom: 52%;
+  bottom: 100%;
   border-top: 2pt solid #17252A;
 }
 
@@ -323,7 +325,64 @@ div.city-show form button {
   font-size: 26pt;
 }
 
-div.allreviews-container
+div.allreviews-container {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.allreviews-container h2 {
+  text-align: center;
+  font-size: 36pt;
+  color: #17252A;
+  margin-bottom: 10pt;
+}
+
+div.allreviews-container a {
+  margin-bottom: 15pt;
+  text-decoration: none;
+  color: peachpuff;
+}
+
+div.allreviews-container div.well {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 15pt;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+div.allreviews-container div.well h4 {
+  font-size: 22pt;
+  margin-bottom: 5pt;
+}
+
+div.allreviews-container div.well h5 {
+  font-size: 16pt;
+  font-weight: 300;
+  margin-bottom: 5pt;
+}
+
 .alert.alert-success {
   color: #3AAFA9;
 }
@@ -348,6 +407,13 @@ div.allreviews-container
     display: block;
     background-color: #17252A;
   }
+  body div.nav-view header nav ul div li a {
+    color: #3AAFA9;
+    padding-left: 30px;
+  }
+  body div.nav-view header nav ul div li a:hover {
+    text-decoration: underline;
+  }
   body .main-view {
     height: 95%;
     width: 100%;
@@ -370,11 +436,30 @@ div.allreviews-container
   .dashboard-container div.dropdown button h3 {
     color: #DEF2F1;
   }
+  .dashboard-container div.dropdown div.dropdown-content {
+    height: 100%;
+  }
   .dashboard-container div.dropdown div.dropdown-content a {
     font-size: 36px;
   }
   .dropdown-content.show {
-    height: 100%;
+    height: 80%;
+    bottom: 0;
+    top: 15%;
+  }
+  div.city-show {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  div.city-show div h2 {
+    font-size: 50px;
+    margin-bottom: 50px;
+  }
+  div.city-show form button:hover {
+    text-decoration: underline;
+    background-color: #2B7A78;
+    color: #17252A;
   }
 }
 /*# sourceMappingURL=darius.css.map */
