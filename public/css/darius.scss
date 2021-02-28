@@ -4,6 +4,7 @@ $dark-green: #2B7A78;
 $base-color: #3AAFA9; 
 $text-color: #DEF2F1;
 $white: #FEFFFF;
+$form-opacity: rgba(0, 0, 0, 0.2);
 
 *{
     margin: 0;
@@ -104,7 +105,7 @@ body {
             margin-bottom: 15pt;
         }
         div{
-            font-size: 50pt;
+            font-size: 150px;
         }
     }
 }
@@ -162,7 +163,7 @@ body {
     position: absolute;
     background-color: #f1f1f1;
     min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 8px 16px 0px $form-opacity;
     z-index: 1;
     width: 100%;
 }
@@ -192,6 +193,8 @@ body {
     // bottom allows for the mobile menu to scroll up
     bottom: 100%;
     border-top: 2pt solid $header-text;
+    font-size: 26px;
+
 }
 // for singleshow.js
 div.city-show{
@@ -265,7 +268,7 @@ div.allreviews-container{
         padding-left: 15pt;
         width: 100%;
     
-        background-color: rgba(0, 0, 0, 0.2);
+        background-color: $form-opacity;
         h4{
             font-size: 22pt;
             margin-bottom: 5pt;
@@ -280,6 +283,135 @@ div.allreviews-container{
         }
         a{
 
+        }
+    }
+}
+// New review page
+div.new-review-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    h1{
+        color: $header-text;
+    }
+    div.arrow{
+        font-size: 150px;
+        color: $header-text;
+    }
+    form{
+        width: 100%;
+        height: 50%;
+        background-color: $form-opacity;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        div.form-top{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            div{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                h3{
+                    color: $header-text;
+                }
+                h3#username{
+                    color: $text-color;
+                }
+                h3#cityname{
+                    color: $text-color;
+
+                }
+            }
+        }
+        div.form-input{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+            textarea#reviewcontent{
+                height: 70%;
+                width: 90%;
+            }
+            input.sub-btn{
+                width: 90%;
+                height: 15%;
+            }
+        }
+    }
+}
+// Edit Review
+div.edit-container{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    h1{
+        color: $header-text;
+    }
+    div.arrow{
+        font-size: 150px;
+        color: $header-text;
+    }
+    form{
+        background-color: $form-opacity;
+        width: 100%;
+        height: 50%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        div.form-top{
+            width: 90%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            div{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                h3{
+                    color: $header-text;
+                }
+                h3#username{
+                    color: $text-color;
+                }
+                h3#cityname{
+                    color: $text-color;
+                }
+            }
+        }
+        div.form-input{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+
+            textarea#reviewcontent{
+                height: 70%;
+                width: 90%;
+                color:$header-text;
+            }
+            input{
+                width: 90%;
+                height: 15%;
+            }
         }
     }
 }

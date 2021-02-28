@@ -161,7 +161,7 @@ body div.main-view {
 }
 
 .dashboard-container .top-text div {
-  font-size: 50pt;
+  font-size: 150px;
 }
 
 .dropbtn {
@@ -254,6 +254,7 @@ body div.main-view {
   overflow-y: scroll;
   bottom: 100%;
   border-top: 2pt solid #17252A;
+  font-size: 26px;
 }
 
 div.city-show {
@@ -381,6 +382,229 @@ div.allreviews-container div.well h5 {
   font-size: 16pt;
   font-weight: 300;
   margin-bottom: 5pt;
+}
+
+div.new-review-container {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.new-review-container h1 {
+  color: #17252A;
+}
+
+div.new-review-container div.arrow {
+  font-size: 150px;
+  color: #17252A;
+}
+
+div.new-review-container form {
+  width: 100%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.new-review-container form div.form-top {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div.new-review-container form div.form-top div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+div.new-review-container form div.form-top div h3 {
+  color: #17252A;
+}
+
+div.new-review-container form div.form-top div h3#username {
+  color: #DEF2F1;
+}
+
+div.new-review-container form div.form-top div h3#cityname {
+  color: #DEF2F1;
+}
+
+div.new-review-container form div.form-input {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+div.new-review-container form div.form-input textarea#reviewcontent {
+  height: 70%;
+  width: 90%;
+}
+
+div.new-review-container form div.form-input input.sub-btn {
+  width: 90%;
+  height: 15%;
+}
+
+div.edit-container {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.edit-container h1 {
+  color: #17252A;
+}
+
+div.edit-container div.arrow {
+  font-size: 150px;
+  color: #17252A;
+}
+
+div.edit-container form {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  height: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+div.edit-container form div.form-top {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+div.edit-container form div.form-top div {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+div.edit-container form div.form-top div h3 {
+  color: #17252A;
+}
+
+div.edit-container form div.form-top div h3#username {
+  color: #DEF2F1;
+}
+
+div.edit-container form div.form-top div h3#cityname {
+  color: #DEF2F1;
+}
+
+div.edit-container form div.form-input {
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+div.edit-container form div.form-input textarea#reviewcontent {
+  height: 70%;
+  width: 90%;
+  color: #17252A;
+}
+
+div.edit-container form div.form-input input {
+  width: 90%;
+  height: 15%;
 }
 
 .alert.alert-success {
