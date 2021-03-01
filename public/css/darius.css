@@ -752,5 +752,13 @@ div.edit-container form div.form-input input {
   div.well div.edit-delete {
     padding-right: 100px;
   }
+  #edit {
+    height: 50px;
+    width: 150px;
+  }
+  #make-smaller {
+    height: 50px;
+    width: 150px;
+  }
 }
 /*# sourceMappingURL=darius.css.map */
