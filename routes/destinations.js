@@ -37,7 +37,7 @@ router.get('/:destid/reviews', isLoggedIn, (req, res) => {
             }
             revArr.push(revData)
         })
-        res.render('reviews/allreviews.ejs', {revData: revArr})
+        res.render('reviews/allreviews.ejs', {revData: revArr, destination: req.params.destid})
     })
 })
 
@@ -82,7 +82,7 @@ router.post('/:destid/reviews/new', isLoggedIn, (req, res) => {
 router.put('/:destid/reviews/:revid/edit', isLoggedIn, (req, res) => {
     db.review.update({content:req.body.reviewcontent},
         {where:{id: req.params.revid }
-        }).then((review) => {
+    }).then((review) => {
         res.redirect(`/destinations/${req.params.destid}/reviews`)
     })
 })
@@ -91,8 +91,9 @@ router.put('/:destid/reviews/:revid/edit', isLoggedIn, (req, res) => {
 router.delete('/:destid/reviews/:revid', isLoggedIn, (req, res) => {
     db.review.destroy({
         where: {id: req.params.revid}
-    }).then( 
-    res.redirect(`/destinations/${req.params.destid}/reviews`) )
+    }).then(() => { 
+    res.redirect(`/destinations/${req.params.destid}/reviews`)
+    })
 })
 
 
