@@ -14,7 +14,6 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       models.user.hasMany(models.review)
-      models.user.belongsToMany(models.destination, {through: "usersDestinations"})
     }
 
     // validPassword

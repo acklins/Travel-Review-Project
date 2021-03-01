@@ -1,19 +1,36 @@
-<h2>Reviews</h2>
+<div class="allreviews-container">
+    <% if (revData[0] !== undefined) { %>
+        <% console.log(revData) %>
+        <h2>Reviews for <%=revData[0].destinationName %></h2>
+            <a href="/destinations/<%= revData[0].destinationId %>/reviews/new" class="main-review-add">New Review</a>
+            <% revData.forEach(function(revData) { %>
+                <!-- We need to figure out how to  -->
+                <div class="well">
+                    <div class="well-flex">
+                        <h5>Name: <i class="ita-name"><%= revData.userName %></i></h5>
+                        <% if (currentUser.name === revData.userName) {  %>
+                            <div class="edit-delete">
+                                <div class="ed-top">
+                                    <a href="/destinations/<%= revData.destinationId %>/reviews/<%= revData.reviewId %>/edit" class="manip-btn">Edit</a>
+                                </div>
+                                <div class="ed-bottom">
+                                    <form method="POST" action="/destinations/<%= revData.destinationId %>/reviews/<%= revData.reviewId %>/?_method=DELETE">
+                                        <input type="submit" value="Delete" class="manip-btn">
+                                    </form>
+                                </div>
+                            </div>
+                        <% } %>
+                    </div>
+                    <div class="rev-cont">
+                        <h6>Review:</h6>
+                        <p><%= revData.reviewText %></p>
+                    </div>
+                </div>
+            <% }) %>
+    <% } else { %>
+        <h3>No Reviews yet!</h3>
+        <a href="/destinations/<%= destination %>/reviews/new" class="main-review-add">New Review</a>
+    <% } %>
+</div>
 
-
-<% if (revData) { %>
-    <% revData.forEach(function(revData) { %>
-        <a href="/destinations/<%= revData.destinationId %>/reviews/new">New Review</a>
-        <div class="well">
-            <h4><%= revData.destinationName %></h4>
-            <h5><%= revData.userName %></h5>
-            <p><%= revData.reviewText %></p>
-            <a href="/destinations/<%= revData.destinationId %>/reviews/<%= revData.reviewId %>/edit">Edit</a>
-            <form method="POST" action="/destinations/<%= revData.destinationId %>/reviews/<%= revData.reviewId %>/?_method=DELETE">
-                <input type="submit" value="Delete">
-            </form>
-        <% }) %>
-     </div>
- <% } else { %>
-    <h3>No Reviews for <%= revData.destinationName %></h3>
-<% } %>
+<!-- add a like counter -->
