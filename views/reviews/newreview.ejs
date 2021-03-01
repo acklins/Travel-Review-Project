@@ -1,10 +1,20 @@
-<h1>Add a new review</h1>
-
-<div>
+<div class="new-review-container">
+    <h1>Add a New Review</h1>
+    <div class="arrow">&#x2193;</div>
     <form action="/destinations/<%= destination.id %>/reviews/new" method="POST">
-        <h3 id="username"><%= currentUser.name %></h3>
-        <h3 id="cityname"><%= destination.city %></h3>
-        <input name="reviewcontent" id="reviewcontent" type="text" placeholder="Enter Review Here">
-        <input type="submit">
+        <div class="form-top">
+            <div>
+                <h3>Name of Reviewer: </h3>
+                <h3 id="username"><%= currentUser.name %></h3>
+            </div>
+            <div>
+                <h3>Name of the City: </h3>
+                <h3 id="cityname"><%= destination.city %></h3>
+            </div>
+        </div>
+        <div class="form-input">
+            <textarea name="reviewcontent" id="reviewcontent" type="text" placeholder="Enter your review here..."></textarea>
+            <input type="submit" class="sub-btn" id='make-smaller'>
+        </div>
     </form>
 </div>
