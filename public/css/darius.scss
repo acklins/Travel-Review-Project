@@ -259,10 +259,10 @@ div.allreviews-container{
         text-decoration: none;
         color: peachpuff;
         height: 20px;
-        // width: 40px;
     }
+    // allows us to hide extra elements created by the forEach loop
     a + a{
-        display: none;
+        // display: none;
     }
     div.well{
         display: flex;
@@ -285,8 +285,15 @@ div.allreviews-container{
         p{
 
         }
-        a{
+        div.edit-delete{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center; 
+            width: 100%;
+            // styling the buttons
+            .manip-btn{
 
+            }
         }
     }
 }

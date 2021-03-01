@@ -355,10 +355,6 @@ div.allreviews-container a {
   height: 20px;
 }
 
-div.allreviews-container a + a {
-  display: none;
-}
-
 div.allreviews-container div.well {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -387,6 +383,19 @@ div.allreviews-container div.well h5 {
   font-size: 16pt;
   font-weight: 300;
   margin-bottom: 5pt;
+}
+
+div.allreviews-container div.well div.edit-delete {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
 }
 
 div.new-review-container {

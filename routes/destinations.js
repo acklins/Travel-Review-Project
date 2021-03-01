@@ -38,7 +38,7 @@ router.get('/:destid/reviews', isLoggedIn, (req, res) => {
             revArr.push(revData)
             console.log(revData)
         })
-        res.render('reviews/allreviews.ejs', {revData: revArr})
+        res.render('reviews/allreviews.ejs', {revData: revArr, destination: req.params.destid})
     })
 })
 
