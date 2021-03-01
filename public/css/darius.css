@@ -352,6 +352,11 @@ div.allreviews-container a {
   margin-bottom: 15pt;
   text-decoration: none;
   color: peachpuff;
+  height: 20px;
+}
+
+div.allreviews-container a + a {
+  display: none;
 }
 
 div.allreviews-container div.well {

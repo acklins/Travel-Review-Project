@@ -255,10 +255,14 @@ div.allreviews-container{
         margin-bottom: 10pt;
     }
     a{
-        // margin-left: 15pt;
         margin-bottom: 15pt;
         text-decoration: none;
         color: peachpuff;
+        height: 20px;
+        // width: 40px;
+    }
+    a + a{
+        display: none;
     }
     div.well{
         display: flex;
@@ -415,6 +419,7 @@ div.edit-container{
         }
     }
 }
+// 
 
 .alert.alert-success{
     color: $base-color;

@@ -1,9 +1,12 @@
 <div class="allreviews-container">
     <h2>Reviews</h2>
+    <% revData.forEach(function(revData) { %>
+        <a href="/destinations/<%= revData.destinationId %>/reviews/new" class="main-review-add">New Review</a>
+    <% }) %>
 
     <% if (revData) { %>
         <% revData.forEach(function(revData) { %>
-            <a href="/destinations/<%= revData.destinationId %>/reviews/new">New Review</a>
+            <!-- <a href="/destinations/<%= revData.destinationId %>/reviews/new" class="main-review-add">New Review</a> -->
             <div class="well">
                 <h4><%= revData.destinationName %></h4>
                 <h5><%= revData.userName %></h5>
