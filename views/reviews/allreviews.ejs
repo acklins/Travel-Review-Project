@@ -6,16 +6,25 @@
             <% revData.forEach(function(revData) { %>
                 <!-- We need to figure out how to  -->
                 <div class="well">
-                    <h5><%= revData.userName %></h5>
-                    <p><%= revData.reviewText %></p>
-                    <% if (currentUser.name === revData.userName) {  %>
-                        <div class="edit-delete">
-                            <a href="/destinations/<%= revData.destinationId %>/reviews/<%= revData.reviewId %>/edit" class="manip-btn">Edit</a>
-                            <form method="POST" action="/destinations/<%= revData.destinationId %>/reviews/<%= revData.reviewId %>/?_method=DELETE">
-                                <input type="submit" value="Delete" class="manip-btn">
-                            </form>
-                        </div>
-                    <% } %>
+                    <div class="well-flex">
+                        <h5>Name: <i class="ita-name"><%= revData.userName %></i></h5>
+                        <% if (currentUser.name === revData.userName) {  %>
+                            <div class="edit-delete">
+                                <div class="ed-top">
+                                    <a href="/destinations/<%= revData.destinationId %>/reviews/<%= revData.reviewId %>/edit" class="manip-btn">Edit</a>
+                                </div>
+                                <div class="ed-bottom">
+                                    <form method="POST" action="/destinations/<%= revData.destinationId %>/reviews/<%= revData.reviewId %>/?_method=DELETE">
+                                        <input type="submit" value="Delete" class="manip-btn">
+                                    </form>
+                                </div>
+                            </div>
+                        <% } %>
+                    </div>
+                    <div class="rev-cont">
+                        <h6>Review:</h6>
+                        <p><%= revData.reviewText %></p>
+                    </div>
                 </div>
             <% }) %>
     <% } else { %>
@@ -23,3 +32,5 @@
         <a href="/destinations/<%= destination %>/reviews/new" class="main-review-add">New Review</a>
     <% } %>
 </div>
+
+<!-- add a like counter -->

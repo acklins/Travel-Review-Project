@@ -95,13 +95,17 @@ body {
         align-items: center;
         h2{
             font-size: 38pt;
+            text-shadow: 3px 3px $header-text;
+
         }
         h3{
            font-size: 20pt;
            font-weight: 300;
+           text-shadow: 2px 2px $header-text;
+
         }
         h2, h3{
-            color: $header-text;
+            color: $text-color;
             margin-bottom: 15pt;
         }
         div{
@@ -254,45 +258,72 @@ div.allreviews-container{
         color: $header-text;
         margin-bottom: 10pt;
     }
-    a{
-        margin-bottom: 15pt;
+    a.main-review-add{
         text-decoration: none;
         color: peachpuff;
         height: 20px;
-    }
-    // allows us to hide extra elements created by the forEach loop
-    a + a{
-        // display: none;
+        font-size: 26px;
     }
     div.well{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        justify-content: center;
+        justify-content: flex-start;
         padding-left: 15pt;
-        width: 100%;
+        height: 15%;
+        width: 80%;
+        border-radius: 10px;
+        margin-top: 20px;
     
         background-color: $form-opacity;
+        div.well-flex{
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            h5{
+                font-size: 16pt;
+                font-weight: 500;
+                margin-bottom: 5pt;
+            }
+        }
         h4{
             font-size: 22pt;
             margin-bottom: 5pt;
         }
-        h5{
-            font-size: 16pt;
-            font-weight: 300;
-            margin-bottom: 5pt;
-        }
+        
         p{
-
+            margin-left: 7.5px;
+            margin-top: 7.5px;
         }
         div.edit-delete{
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-between;
             align-items: center; 
-            width: 100%;
+            width: 15%;
+            padding-left: 20%;
+            // border: 2px solid;
             // styling the buttons
-            .manip-btn{
+            .ed-top{
 
+                a{
+                    color: $text-color;
+                    background-color: $header-text;
+                    text-decoration: none;
+                    margin-right: 10pt;
+                    width: 35px;
+                    height: 25pt;
+                }
+            }
+            .ed-bottom{
+                form{
+                    input.manip-btn{
+                        color: $header-text;
+                    }
+                }
+            }
+            .manip-btn{
+                margin-bottom: 0;
+                color: $header-text;
             }
         }
     }
@@ -471,7 +502,6 @@ div.edit-container{
             }
             // Here is where the partials/alerts file will go BELOW
         }
-
     }
     // Dashboard
     .dashboard-container{
@@ -521,7 +551,7 @@ div.edit-container{
         div{
             h2{
                 font-size: 50px;
-                margin-bottom: 50px;
+                padding-bottom: 25px;
             }
             img{
 
@@ -538,8 +568,32 @@ div.edit-container{
             }
         }
     }
+    // singleshow.ejs
+    div.city-show{
+        div{
+            flex-direction: column;
+            div{
 
-    div.allreviews-container{
+            }
+            h2{
 
+            }
+            img{
+
+            }
+        }
+        form{
+            button{
+
+            }
+        }
+    }
+    div.well{
+        div.well-flex{
+            justify-content: space-between !important;
+        }
+        div.edit-delete{
+            padding-right: 100px;
+        }
     }
 }

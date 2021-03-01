@@ -148,15 +148,17 @@ body div.main-view {
 
 .dashboard-container .top-text h2 {
   font-size: 38pt;
+  text-shadow: 3px 3px #17252A;
 }
 
 .dashboard-container .top-text h3 {
   font-size: 20pt;
   font-weight: 300;
+  text-shadow: 2px 2px #17252A;
 }
 
 .dashboard-container .top-text h2, .dashboard-container .top-text h3 {
-  color: #17252A;
+  color: #DEF2F1;
   margin-bottom: 15pt;
 }
 
@@ -348,11 +350,11 @@ div.allreviews-container h2 {
   margin-bottom: 10pt;
 }
 
-div.allreviews-container a {
-  margin-bottom: 15pt;
+div.allreviews-container a.main-review-add {
   text-decoration: none;
   color: peachpuff;
   height: 20px;
+  font-size: 26px;
 }
 
 div.allreviews-container div.well {
@@ -366,12 +368,31 @@ div.allreviews-container div.well {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   padding-left: 15pt;
-  width: 100%;
+  height: 15%;
+  width: 80%;
+  border-radius: 10px;
+  margin-top: 20px;
   background-color: rgba(0, 0, 0, 0.2);
+}
+
+div.allreviews-container div.well div.well-flex {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+div.allreviews-container div.well div.well-flex h5 {
+  font-size: 16pt;
+  font-weight: 500;
+  margin-bottom: 5pt;
 }
 
 div.allreviews-container div.well h4 {
@@ -379,23 +400,41 @@ div.allreviews-container div.well h4 {
   margin-bottom: 5pt;
 }
 
-div.allreviews-container div.well h5 {
-  font-size: 16pt;
-  font-weight: 300;
-  margin-bottom: 5pt;
+div.allreviews-container div.well p {
+  margin-left: 7.5px;
+  margin-top: 7.5px;
 }
 
 div.allreviews-container div.well div.edit-delete {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  width: 15%;
+  padding-left: 20%;
+}
+
+div.allreviews-container div.well div.edit-delete .ed-top a {
+  color: #DEF2F1;
+  background-color: #17252A;
+  text-decoration: none;
+  margin-right: 10pt;
+  width: 35px;
+  height: 25pt;
+}
+
+div.allreviews-container div.well div.edit-delete .ed-bottom form input.manip-btn {
+  color: #17252A;
+}
+
+div.allreviews-container div.well div.edit-delete .manip-btn {
+  margin-bottom: 0;
+  color: #17252A;
 }
 
 div.new-review-container {
@@ -692,12 +731,26 @@ div.edit-container form div.form-input input {
   }
   div.city-show div h2 {
     font-size: 50px;
-    margin-bottom: 50px;
+    padding-bottom: 25px;
   }
   div.city-show form button:hover {
     text-decoration: underline;
     background-color: #2B7A78;
     color: #17252A;
+  }
+  div.city-show div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  div.well div.well-flex {
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
+  }
+  div.well div.edit-delete {
+    padding-right: 100px;
   }
 }
 /*# sourceMappingURL=darius.css.map */
