@@ -1,107 +1,64 @@
-# Express Authentication
+# Travel Review App
 
-Express authentication template using Passport + flash messages + custom middleware
+## Heroku Link
+[Heroku Site](https://darius-travel.herokuapp.com/)
 
-## What it includes
+## Project Description
 
-* Sequelize user model / migration
-* Settings for PostgreSQL
-* Passport and passport-local for authentication
-* Sessions to keep user logged in between pages
-* Flash messages for errors and successes
-* Passwords that are hashed with BCrypt
-* EJS Templating and EJS Layouts
+Our project is a Travel Review Site. This is an app that users can log into their account and browse through various travel destinations while reading reviews from other users. They can check out various pictures from the destination, the current weather, and leave a review from any place they have visited. They can also favorite destinations that will be saved to their favorites page so they can come back and revisit them later, either for fun or to leave a review once they have gone and visited that place themselves.
 
-### User Model
+### Instructions
 
-| Column Name | Data Type | Notes |
-| --------------- | ------------- | ------------------------------ |
-| id | Integer | Serial Primary Key, Auto-generated |
-| name | String | Must be provided |
-| email | String | Must be unique / used for login |
-| password | String | Stored as a hash |
-| createdAt | Date | Auto-generated |
-| updatedAt | Date | Auto-generated |
+* Fork and Clone this repo
+* Run `npm install` to install all dependencies
+* Run `echo "SESSION_SECRET=yoursecrethere" >> .env` to create a .env file with your secret
+* Create your database by running `createdb traveldb`
+* Run `sequelize db:migrate` and `sequelize db:seed:all` to create your models and seed your database
 
-### Default Routes
+### Technologies Used
 
-| Method | Path | Location | Purpose |
-| ------ | ---------------- | -------------- | ------------------- |
-| GET | / | server.js | Home page |
-| GET | /auth/login | auth.js | Login form |
-| GET | /auth/signup | auth.js | Signup form |
-| POST | /auth/login | auth.js | Login user |
-| POST | /auth/signup | auth.js | Creates User |
-| GET | /auth/logout | auth.js | Removes session info |
-| GET | /profile | server.js | Regular User Profile |
+* Express
+* Node
+* PostgreSQL
+* HTML
+* CSS/Sass
+* JavaScript
+* Escalidraw
+* AdobeXD
+* Postman
+* EJS
+* Heroku
 
-## Steps To Use
+## Screenshots
 
-#### 1. Create a new repo on Github and use your 'express-authentication' as the template
+<img src ="https://i.imgur.com/FV1XiXwm.png">
+<img src ="https://i.imgur.com/dBiAdubm.png">
+<img src ="https://i.imgur.com/vAUl0wzm.png">
+<img src ="https://i.imgur.com/8UpoDZam.png">
+<img src ="https://i.imgur.com/GKktA0Cm.png">
+<img src ="https://i.imgur.com/SVBIOg5m.png">
+<img src ="https://i.imgur.com/WzvPCUkm.png">
+<img src ="https://i.imgur.com/nInSMNPm.png">
 
-When we are finished with this boilerplate, we are going to make it a template on Github that will allow us to create a new repo on Github with all this code already loaded in.
-* Go to `github.com` and create a new repository. In the template dropdown, choose this template.
-* Clone your new repo to your local machine
-* Get Codin'!
+## Wireframes
 
-#### 2. Delete any .keep files
+<img src ="https://i.imgur.com/046lKiRm.png">
+<img src ="https://i.imgur.com/QoPl8kPm.png">
+<img src ="https://i.imgur.com/xRAt3o4m.png">
+<img src ="https://i.imgur.com/i6zO8wjm.png">
+<img src ="https://i.imgur.com/r1El8Anm.png">
+<img src ="https://i.imgur.com/KgkrFxqm.png">
 
-The `.keep` files are there to maintain the file structure of the auth. If there is a folder that has nothing in it, git won't add it. The dev work around is to add a file to it that has nothing in it, just forces git to keep the folder so we can use it later.
+### User Stories
 
-#### 3. Install node modules from the package.json
+* As a user, I want to be able to sign up when I open the site, and then be able to keep logging in afterwards.
+* As a user, I want to be able to easily sift through the cities available by having it displayed in a drop down menu.
+* As a user, I would like to see and be able to add, edit, and delete my own reviews.
+* As a user, I want to be able to navigate back to the dashboard or logout from any page on the site.
 
-```
-npm install
-```
+### Unsolved Problems/Major Hurdles
 
-(Or just `npm i` for short)
-
-#### 4. Customize with new project name
-
-Remove defaulty type stuff. Some areas to consider are:
-
-* Title in `layout.ejs`
-* Description/Repo Link in `package.json`
-* Remove boilerplate's README content and replace with new project's readme
-
-#### 5. Create a new database for the new project
-
-Using the sequelize command line interface, you can create a new database from the terminal.
-
-```
-createdb <new_db_name>
-```
-
-#### 6. Update `config.json`
-
-* Change the database name
-* Other settings are likely okay, but check username, password, and dialect
-
-#### 7. Check the models and migrations for relevance to your project's needs
-
-For example, if your project requires a birthdate field, then don't add that in there. 
-
-> When changing your models, update both the model and the migration.
-
-#### 8. Run the migrations
-
-```
-sequelize db:migrate
-```
-
-#### 9. Add a `.env` file with the following fields:
-
-* SESSION_SECRET: Can be any random string; usually a hash in production
-* PORT: Usually 3000 or 8000
-
-#### 10. Run server; make sure it works
-
-```
-nodemon
-```
-
-or
-
-```
-node index.js
-```
+* A difficult to navigate API that ended up being more complicated than just creating a seed file. Though it took an extra evening to get done, it was the right decision to make for this application.
+* Conflicts in CSS and SCSS files that caused duplicate navigation bars and picture errors.
+* We had to change our MVP to adjust for a change in feasible goals, including omitting a favorites feature and model, search feature, and a home destination page with all destinations displayed.
+* We unfortunately were unable to reach our stretch goals as well which included, oauth with Google Passport, music in the background, and adding weather information about the destinations.
